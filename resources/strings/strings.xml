@@ -1,0 +1,11 @@
+<strings>
+    <string id="AppName">PlusCodeNav</string>
+    <string id="HELP">Enter the 7 character plus code (e.g. 66XX+HR) from Google Maps to start navigation. Since the code is relative, it can not be used for long distance navigation.\nMore information: github.com/wardvanwanrooij/pluscodenav</string>
+    <string id="STATE_UNDEFINED">Please wait</string>
+    <string id="STATE_INITIALIZE_GPS">Acquiring GPS location, please wait.</string>
+    <string id="STATE_LOCATION_AVAILABLE">GPS location acquired.\nTap to enter plus code to navigate to. Distance to destination should be less than $1$ kilometers. Press menu button for help.</string>
+    <string id="STATE_CODE_ENTERED_ERROR_LENGTH">Entered code $1$ is invalid. It should be at least 7 characters.\nTap to re-enter plus code.</string>
+    <string id="STATE_CODE_ENTERED_ERROR_NOPLUS">Entered code $1$ is invalid. It should contain a plus character at position 5.\nTap to re-enter plus code.</string>
+    <string id="STATE_CODE_ENTERED_ERROR_CHARS">Entered code $1$ is invalid. It contains invalid characters.\nTap to re-enter plus code.</string>
+    <string id="STATE_RESULT_OK">Destination location has been calculated.\nTap to start navigation to destination.</string>
+</strings>
