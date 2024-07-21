@@ -48,7 +48,7 @@ class PlusCodeNavController {
             //_input = "M8R5+F9";
             WatchUi.pushView(new WatchUi.TextPicker(_input), new $.PlusCodeNavTextPickerDelegate(self), WatchUi.SLIDE_DOWN);
         } else if (_state == STATE_RESULT_OK) {
-            var waypoints;
+            var waypoints, intent = null;
 
             PersistedContent.saveWaypoint(_destination, {:name => _input});
             waypoints = PersistedContent.getAppWaypoints();
@@ -56,10 +56,16 @@ class PlusCodeNavController {
                 var waypoint;
 
                 waypoint = waypoints.next();
-                if (waypoint == null) { break; }
-                if (waypoint.getName().equals(_input)) {
-                    System.exitTo(waypoint.toIntent());
+                if (waypoint == null) {
+                    break;
+                } else if (waypoint.getName().equals(_input)) {
+                    intent = waypoint.toIntent();
+                } else {
+                    waypoint.remove();
                 }
+            }
+            if (intent != null) {
+                System.exitTo(intent);
             }
         }
     }

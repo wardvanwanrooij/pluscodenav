@@ -31,7 +31,7 @@ class PlusCodeNavView extends WatchUi.View {
                 case PlusCodeNavController.STATE_CODE_ENTERED_ERROR_LENGTH: message = Lang.format(WatchUi.loadResource(Rez.Strings.STATE_CODE_ENTERED_ERROR_LENGTH), [ _controller.getInput() ]); break;
                 case PlusCodeNavController.STATE_CODE_ENTERED_ERROR_NOPLUS: message = Lang.format(WatchUi.loadResource(Rez.Strings.STATE_CODE_ENTERED_ERROR_NOPLUS), [ _controller.getInput() ]); break;
                 case PlusCodeNavController.STATE_CODE_ENTERED_ERROR_CHARS: message = Lang.format(WatchUi.loadResource(Rez.Strings.STATE_CODE_ENTERED_ERROR_CHARS), [ _controller.getInput() ]); break;
-                case PlusCodeNavController.STATE_RESULT_OK: message = WatchUi.loadResource(Rez.Strings.STATE_RESULT_OK); break;
+                case PlusCodeNavController.STATE_RESULT_OK: message = Lang.format(WatchUi.loadResource(Rez.Strings.STATE_RESULT_OK), [ _controller.getInput() ]); break;
                 default: message = WatchUi.loadResource(Rez.Strings.STATE_UNDEFINED); break;
             }
         }
